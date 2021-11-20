@@ -7,7 +7,7 @@ Tamagotchi game
 
 # Description
 
-- this is going to be Tamagotchi game that will allow users to make a pet, name the pet, and give the pet an age. The user will feed the pet, play with the pet, and keep the pet awake in order to avoid it from dying. The pet dies if any one those three metrics reaches 10.
+- this is going to be Tamagotchi game that will allow users to make a pet, name the pet, and give the pet an age. The user will feed the pet, play with the pet, and keep the pet awake in order to avoid it from dying. The pet dies if any one those three metrics reaches 10. The user wins the game, if the game progress meter reaches 100% without the pet dying.
 
 # User Story:
 
