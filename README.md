@@ -6,7 +6,7 @@ Tamagotchi game
 - this is going to be Tamagotchi game that will allow users to make a pet, name the pet, and give the pet an age. The user will feed the character, play with the character, and get the 
 # User Story:
 
-1. As a user I can create a Tamagotchi
+1. As a user I can click on mt Tamagotchi to select it
 2. As a user, I can name my Tamagotchi
 3. As a user, I can give my Tamagotchi an age
 4. the Tamagotchi pet will have four integer metrics
