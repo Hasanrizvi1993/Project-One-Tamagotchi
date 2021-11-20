@@ -1,3 +1,4 @@
+[Tamagotchi-project 1-GA.pdf](https://github.com/Hasanrizvi1993/Project-One-Tamagotchi/files/7574118/Tamagotchi-project.1-GA.pdf)
 # Project-One-Tamagotchi
 Tamagotchi game
 
