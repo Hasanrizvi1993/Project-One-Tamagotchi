@@ -21,3 +21,5 @@ Tamagotchi game
    -  the Play with your pet button will decrease the boedom metric by one point
    -  the turn light on/off button will increase sleepiness or decrease. When the light is on the sleepiness will go down, when the light is off the sleepiness will       go up. 
 9. the pet will have physical changes at certain ages as the pet ages. It will have two different physical changes. the first one will be a young character, the        second one will be an older version of it. This physical apperance will change when they Age metric reaches age 50 out of 100. 
+10. if and when the character dies, the following message will appear "make a choice! try again or quit game!"
+
