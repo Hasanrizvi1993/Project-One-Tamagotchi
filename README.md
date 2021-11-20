@@ -31,3 +31,4 @@ Tamagotchi game
 12. if the "try again button is clicked, the game will restart
 13. if the "quit game" button is clicked, the game will end
 14. if time permits, I might add additonal features to it
+![little-cute-cartoon-young-dragon-fantasy-monster-vector-26792748](https://user-images.githubusercontent.com/88109038/142741469-b28d002b-b7bc-48e2-bac1-2f2b30676269.jpeg)
