@@ -30,3 +30,4 @@ Tamagotchi game
 11. if the character dies, the following message will appear "make a choice! try again or quit game!"
 12. if the "try again button is clicked, the game will restart
 13. if the "quit game" button is clicked, the game will end
+14. if time permits, I might add additonal features to it
