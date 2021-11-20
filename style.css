@@ -1,0 +1,54 @@
+body{
+    background-image: url("./project-one-images/background.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: fixed;
+}
+.container, .row {
+    display:flex;
+
+}
+
+   
+
+.youngdragon{
+    width: 500px;
+    height: auto;
+    position: relative;
+    padding-right: 200px;
+}
+#hunger{
+    background-color: aqua;
+    height: 24px;
+    width:50%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#sleepiness{
+    background-color: rgb(203, 47, 255);
+    height: 24px;
+    width:50%;
+    margin-top: 20px;
+}
+#boredom{
+    background-color:indianred;
+    height: 24px;
+    width:50%;
+    margin-top: 20px;
+}
+#progressbar {
+    background-color: #40ff00;
+    height: 30px;
+    width: 70%;
+    margin-top: 50px;
+}
+#age {
+    background-color:gold;
+    width: 30px;
+    height: 300px;
+}
+/* .controlpanel {
+    margin-top: 300px;
+    
+}
+ */
