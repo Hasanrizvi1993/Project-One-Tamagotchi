@@ -3,17 +3,26 @@ body{
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: fixed;
+    overflow-y: hidden;
 }
+h1{
+    margin-left: 57%
+}
+.container{
+    display:flex;
+}  
 .container, .row {
     display:flex;
     padding-top:100px;
+    text-align: center;
 }  
 
 .youngdragon{
     width: 500px;
     height: auto;
     position: relative;
-    padding-right: 200px;
+    margin-left: 400px;
+    margin-top: 10%
 }
 #hunger{
     background-color: aqua;
@@ -34,16 +43,28 @@ body{
     width: 500px;
     margin-top: 20px;
 }
+
+.light, .play, .feed {
+    height: 80px;
+    width:40px;
+    border: 1px solid yellow;
+    text-align: center;
+}
+
+
 #progressbar {
     background-color: #40ff00;
     height: 30px;
     width: 70%;
-    margin-top: 50px;
-    margin-left: 170px;
+    margin-top: 3%;
+    margin-left: 15%;
+    text-align: center;
 }
 #age {
     background-color:gold;
     width: 30px;
-    height: 400px;
-    margin-left: 100px;
+    height: 600px;
+    margin-left: 1300%;
+    margin-top: 170%;
+    text-align: center;
 }
