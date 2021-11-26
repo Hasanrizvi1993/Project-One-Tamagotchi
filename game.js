@@ -105,7 +105,7 @@ function ageProgress() {
 ageProgress();
 
 function endGame(){
-  console.log("Game Ended")
+  alert("Game Ended")
 }
 
 
