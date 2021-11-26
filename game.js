@@ -1,3 +1,4 @@
+let playerName = "";
 
 //These variables independently control the width of each bar
 let feedWidth = 1
@@ -9,6 +10,19 @@ let element = document.getElementById('feedbar');
 let element2 = document.getElementById('playbar');
 let element3 = document.getElementById('sleepinessbar');  
 
+//welcome modal input 
+// document.getElementById("myButton").onclick = function(){
+//   console.log('pressing')
+//   let name = document.getElementById("myText").value
+//   alert(name)
+// }
+
+function playerNameFunc(){
+  playerName = document.getElementById("myText").value
+  // alert(playerName)
+  document.getElementById("nameOutput").innerHTML = playerName
+}
+
 
 // main function controlling feed, play, light status bar 
 function bar() {
@@ -18,7 +32,7 @@ function bar() {
   function scene() {
     if (feedWidth >= 10 || playWidth >= 10 || lightWidth >= 10) {
       clearInterval(identity);
-      // endGame();
+      endGame();
       console.log("end game")
     } else {
       feedWidth++;
@@ -67,8 +81,6 @@ function timeLeft(){
         clearInterval(startTimer);
         endGame();
       }
-
-
   }
 }
 timeLeft();
@@ -92,9 +104,8 @@ function ageProgress() {
 ageProgress();
 
 function endGame(){
-  alert("Game Has Ended")
+  console.log("Game Ended")
 }
-
 
 
     

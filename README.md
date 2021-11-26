@@ -51,7 +51,7 @@ make functionality of the game ending if it reaches 10 in anyone of the metrics
 
 if the time reaches 100 without anyone of the metrics reaching 10, then the page changes to the win alert
 
-if the time reaches the user loses, the lose alert pops up.
+if and of the bars reach 10 the user loses, the lose alert pops up.
 
 they both have the same modal pop up that needs to have thier own clicklable options to either restart the game or exit. -->
 

@@ -4,19 +4,20 @@ body{
     background-size: 100%;
     background-position: fixed;
     overflow-y: hidden;
+    margin-top: 20vw;
 } 
-
 
 .container{
     display: flex;
 }
 
 .youngdragon{
-    width: 50px;
+    width: 300px;
     height: auto;
-    position: relative;
-    padding-left: 40px;
-    margin-top: 10%
+    position: absolute;
+    right: 150px;
+    top: 150px;
+    z-index: 4;
 } 
 
 /* Buttons and Bars Status */

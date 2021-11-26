@@ -8,45 +8,73 @@
     <link rel="stylesheet" href="./style.css">
     <title>Tamagotchi</title>
 </head>
+
 <body>
-<!-- second-main game page starts -->
+    <p id="nameOutput"></p>
+<!-- Welcome Modal -->
 
-<div class="images">
-    <img class="youngdragon" src="project-one-images/young-dragon.png"/>
-</div>
+<div id="myModal" class="modal">
 
-<div class="container">
-    <div class="buttonClass">
-        <button id="feedButton" onclick="update('feed')">Feed</button>
-        <button id="playButton" onclick="update('play')">Play</button>
-        <button id="lightButton" onclick="update('light')">Light</button>
+<!-- Modal content -->
+    <div class="modal-content">
+      <label>Welcome to Tamagotchi</label><br>
+      <label>Please enter name to get started:</label><br>
+      <input type="text" id="myText"><br>
+      <button id="myButton" onclick="playerNameFunc()">Play</button>
+
+      <!-- <form>
+          <input id="myInput" type="text" value="Swag"/>
+          <input type="submit" value="Submit">
+
+      </form> -->
     </div>
-    <div class="barClass">
-        <div class="barBackground">
-            <div id="feedbar"></div>
-        </div>
-        <div class="barBackground">
-            <div id="playbar"></div>
-        </div>
-        <div class="barBackground">
-            <div id="sleepinessbar"></div>
-        </div>
-    </div>    
+  
 </div>
 
-</div>
-    <div id="timer">
-        <div id="timeLeft">Time</div>
+
+
+
+
+
+
+
+<!-- main game page -->
+    <div class="images">
+        <img class="youngdragon" src="project-one-images/young-dragon.png"/>
     </div>
 
-    <div id="ageBar">
-        <div id="ageProgress"></div>
+    <div class="container">
+        <div class="buttonClass">
+            <button id="feedButton" onclick="update('feed')">Feed</button>
+            <button id="playButton" onclick="update('play')">Play</button>
+            <button id="lightButton" onclick="update('light')">Light</button>
+        </div>
+        <div class="barClass">
+            <div class="barBackground">
+                <div id="feedbar"></div>
+            </div>
+            <div class="barBackground">
+                <div id="playbar"></div>
+            </div>
+            <div class="barBackground">
+                <div id="sleepinessbar"></div>
+            </div>
+        </div>    
     </div>
-    <label>Age</label>
-</div>
 
+    <div >
+        <label>Time</label>
+        <div id="timer">
+            <div id="timeLeft"></div>
+        </div>
 
-</div>
+        <label>Age</label>
+        <div id="ageBar">
+            <div id="ageProgress"></div>
+        </div>
+        
+        
+    </div>
 
 </body>
 </html>
