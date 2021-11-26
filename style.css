@@ -6,11 +6,7 @@ body{
     overflow-y: hidden;
 } 
 
-/* .container, .row{
-    display:flex;
-    padding-top:100px;
-    text-align: center;
-}   */
+
 .container{
     display: flex;
 }
@@ -63,6 +59,7 @@ body{
     top:100px;
     border: 2px black solid;
     background-color: lightgreen;
+    text-align: center;
 }
 #timeLeft{
     float:right;
@@ -78,5 +75,6 @@ body{
     width: 1%;
     height: 30px;
     background-color: green;
-
 }
+
+
