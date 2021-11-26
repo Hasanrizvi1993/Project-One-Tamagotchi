@@ -21,6 +21,7 @@ function playerNameFunc(){
   playerName = document.getElementById("myText").value
   // alert(playerName)
   document.getElementById("nameOutput").innerHTML = playerName
+  document.getElementById("myModal").style.display = "none"
 }
 
 

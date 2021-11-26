@@ -7,17 +7,39 @@ body{
     margin-top: 20vw;
 } 
 
+.modal {
+overflow: hidden; 
+height: 100%; 
+z-index: 1; 
+left: 0;
+position: fixed; 
+top: 0;
+width: 100%; 
+background-color: rgba(0, 0, 0, 0.481); 
+background-color: rgba(0, 0, 0, 0.769); 
+}
+
+
+.modal-content {
+background-color: #fefefe;
+margin: 15% auto; 
+padding: 20px;
+border: 1px solid #888;
+width: 80%; 
+}
+
+
 .container{
     display: flex;
 }
 
 .youngdragon{
-    width: 300px;
+    width: 500px;
     height: auto;
-    position: absolute;
-    right: 150px;
-    top: 150px;
-    z-index: 4;
+    position: fixed;
+    right: 0;
+    top: 0;
+    /* z-index: 2; */
 } 
 
 /* Buttons and Bars Status */
