@@ -1,30 +1,54 @@
 
-//function for feed button and progress bar
+//These variables independently control the width of each bar
+let feedWidth = 1
+let playWidth = 1
+let lightWidth = 1
+
+//These variables grab the bar IDs for use throughout the app for rendering purposes
+let element = document.getElementById('feedbar'); 
+let element2 = document.getElementById('playbar');
+let element3 = document.getElementById('sleepinessbar');  
+
+
+// main bar controlling feed, play, light
+function bar() {
+
+  let identity = setInterval(scene, 800);
+
+  function scene() {
+    if (feedWidth >= 10 || playWidth >= 10 || lightWidth >= 10) {
+      clearInterval(identity);
+      console.log("end game")
+    } else {
+      feedWidth++;
+      playWidth++;
+      lightWidth++ 
+      element.style.width = feedWidth + '%';
+      element.innerHTML = feedWidth * 1
+      element2.style.width = playWidth + '%';
+      element2.innerHTML = playWidth * 1
+      element3.style.width = lightWidth + '%';
+      element3.innerHTML = lightWidth * 1
+    }
+   
+  }
+}
+bar();
+
 function update(param) {
   // console.log('feed')
   if (param == "feed"){
-    let element = document.getElementById("feedbar"); 
-    console.log('feed')  
-    element.style.width = -1 + "%" ;
+    feedWidth -= 2
+    element.style.width = element.innerHTML + "%";
+  } else if (param == "play"){
+    playWidth -= 2
+    element.style.width = element.innerHTML + "%";
+  } else if (param == "light"){
+       lightWidth -= 2
+    element.style.width = element.innerHTML + "%";
   }
-    // let width = 1;
-    // let identity = setInterval(scene(element), 10);
-    // function scene(param) {
-    //   console.log(param)
-    //   if (width >= 100) {
-    //     clearInterval(identity);
-    //   } else {
-    //     width++; 
-      
-    //     param.style.width = width + '%';
-    //     param.innerHTML = width * 1
-    //   }
-    // }
-    // scene(element)
+   
 }
-
- 
-
 
 // function for the game completion timer 
 //deathbar
@@ -61,58 +85,8 @@ function ageProgress() {
   }
 }
 ageProgress();
-// main bar controlling feed, play, light
 
-function bar() {
-  let element = document.getElementById('feedbar'); 
-  let element2 = document.getElementById('playbar');
-  let element3 = document.getElementById('sleepinessbar');  
 
-  let width = 1;
-  let identity = setInterval(scene, 500);
-  function scene() {
-    if (width >= 10) {
-      clearInterval(identity);
-    } else {
-      width++; 
-      element.style.width = width + '%';
-      element.innerHTML = width * 1
-      element2.style.width = width + '%';
-      element2.innerHTML = width * 1
-      element3.style.width = width + '%';
-      element3.innerHTML = width * 1
-    }
-   
-  }
-}
-bar();
 
-function update(param) {
-  // console.log('feed')
-  if (param == "feed"){
-    let elementNumber = document.getElementById("feedbar").innerHTML; 
-    let element = document.getElementById("feedbar"); 
-    console.log('feed')  
-    console.log(elementNumber)
-    element.innerHTML -= 1
-    element.style.width = element.innerHTML + "%";
- 
-  } else if (param == "play"){
-    let elementNumber = document.getElementById("playbar").innerHTML; 
-    let element = document.getElementById("playbar"); 
-    console.log('feed')  
-    console.log(elementNumber)
-    element.innerHTML -= 1
-    element.style.width = element.innerHTML + "%";
-  } else if (param == "light"){
-    let elementNumber = document.getElementById("sleepinessbar").innerHTML; 
-    let element = document.getElementById("sleepinessbar"); 
-    console.log('feed')  
-    console.log(elementNumber)
-    element.innerHTML -= 1
-    element.style.width = element.innerHTML + "%";
-  }
-   
-}
     
   
