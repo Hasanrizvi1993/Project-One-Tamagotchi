@@ -9,32 +9,47 @@
     <title>Tamagotchi</title>
 </head>
 <body>
-    <h1>Player Name:      </h1>
+<!-- second-main game page starts -->
+
+<div class="images">
+    <img class="youngdragon" src="project-one-images/young-dragon.png"/>
+</div>
+
 <div class="container">
-<div class="controlpanel">
-    <div class="row">
-        <button class="feed">Feed</button>
-        <div id="hunger">Hunger</div>
+    <div class="buttonClass">
+        <button id="feedButton">Feed</button>
+        <button id="playButton">Play</button>
+        <button id="lightButton">Light</button>
     </div>
-    <div class="row"> 
-        <button class="light">Light</button>
-        <div id="sleepiness">Sleepiness</div>
-    </div>
-    <div class="row">
-        <button class="play">Play</button>
-        <div id="boredom">Boredom</div>
-    </div>
+    <div class="barClass">
+        <div class="barBackground">
+            <div id="feedbar"></div>
+        </div>
+        <div class="barBackground">
+            <div id="playbar"></div>
+        </div>
+        <div class="barBackground">
+            <div id="sleepinessbar"></div>
+        </div>
+    </div>    
 </div>
-    <div class="images">
-        <img class="youngdragon" src="project-one-images/young-dragon.png"/>
-    <!-- <img class="olddragon" src="project-one-images/old-dragon.png"/>    -->
-    </div>
-    <div class="pet-age">
-        <div id="age">Age</div>
-    </div>
+
+
+
+
 </div>
-    <div class="gameprogess">
-    <div id="progressbar">Game Completion</div>
+    <div id="timer">
+    <div id="timeLeft">Death</div>
+    </div>
+
+    <div id="ageBar">
+        <div id="ageProgress"></div>
+    </div>
+    <label>Age</label>
 </div>
+
+
+</div>
+
 </body>
 </html>

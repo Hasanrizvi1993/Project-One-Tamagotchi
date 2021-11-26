@@ -31,3 +31,30 @@ Tamagotchi game
 12. if the "try again button is clicked, the game will restart
 13. if the "quit game" button is clicked, the game will end
 14. if time permits, I might add additonal features to it
+
+
+<!-- sudo code
+
+adding functionality to the buttons (feed, light, play) using functions, set interval.
+
+make the hunger, sleepiness, boredom bar go from 1-10 automatically using a for loop or function
+
+make button functionality that brings down the bar progress while its going up
+
+make the game progress main bar go up from 1 - 100% (deathbar)
+
+make the age bar go from 1 - 100
+
+change the apperance of the dragon when you hit the age is at 50%
+
+make functionality of the game ending if it reaches 10 in anyone of the metrics
+
+if the time reaches 100 without anyone of the metrics reaching 10, then the page changes to the win alert
+
+if the time reaches the user loses, the lose alert pops up.
+
+they both have the same modal pop up that needs to have thier own clicklable options to either restart the game or exit. -->
+
+
+
+

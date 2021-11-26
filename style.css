@@ -4,67 +4,82 @@ body{
     background-size: 100%;
     background-position: fixed;
     overflow-y: hidden;
-}
-h1{
-    margin-left: 57%
-}
-.container{
-    display:flex;
-}  
-.container, .row {
+} 
+
+/* .container, .row{
     display:flex;
     padding-top:100px;
     text-align: center;
-}  
+}   */
+.container{
+    display: flex;
+}
 
 .youngdragon{
-    width: 500px;
+    width: 50px;
     height: auto;
     position: relative;
-    margin-left: 400px;
+    padding-left: 40px;
     margin-top: 10%
+} 
+
+/* Buttons and Bars Status */
+.container{
+    display: flex;
 }
-#hunger{
-    background-color: aqua;
-    height: 24px;
-    width:500px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+
+.buttonClass{
+    display: flex;
+    flex-direction: column;
 }
-#sleepiness{
-    background-color: rgb(203, 47, 255);
-    height: 24px;
-    width:500%;
-    margin-top: 20px;
+.barClass{
+    flex: 1;
 }
-#boredom{
-    background-color:indianred;
-    height: 24px;
+.barBackground{
+    /* width: 100%; */
+    background-color: grey;
+}
+#feedbar{
+  /* width: 1%; */
+  height: 30px;
+  background-color: green;
+}
+
+#playbar{
+  width: 1%;
+  height: 30px;
+  background-color: red;
+}
+
+#sleepinessbar{
+  width: 1%;
+  height: 30px;
+  background-color: blue;
+}
+/* Buttons and Bar Status END */
+
+
+#timer {
+    left: 100px;
     width: 500px;
-    margin-top: 20px;
-}
-
-.light, .play, .feed {
-    height: 80px;
-    width:40px;
-    border: 1px solid yellow;
-    text-align: center;
-}
-
-
-#progressbar {
-    background-color: #40ff00;
     height: 30px;
-    width: 70%;
-    margin-top: 3%;
-    margin-left: 15%;
-    text-align: center;
+    top:100px;
+    border: 2px black solid;
+    background-color: lightgreen;
 }
-#age {
-    background-color:gold;
-    width: 30px;
-    height: 600px;
-    margin-left: 1300%;
-    margin-top: 170%;
-    text-align: center;
+#timeLeft{
+    float:right;
+    background: red;
+    height:30px;  
+}
+
+#ageBar {
+    width:100%;
+    background-color: gold;
+}
+#ageProgress {
+    width: 1%;
+    height: 30px;
+    background-color: green;
+
 }
