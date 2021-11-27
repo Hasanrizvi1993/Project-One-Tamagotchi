@@ -60,6 +60,23 @@ width: 80%;
     display: flex;
     flex-direction: column;
 }
+#feedButton{
+    margin-bottom: 60px;
+}
+#playButton{
+    margin-bottom: 60px;
+}
+#lightButton{
+    margin-bottom: 60px;
+}
+#nameOutput{
+    background-color:rgb(255, 183, 0);
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold
+}
+
 .barClass{
     flex: 1;
 }
@@ -68,18 +85,21 @@ width: 80%;
   width: 1%;
   height: 30px;
   background-color: green;
+  margin-bottom:50px;
 }
 
 #playbar{
   width: 1%;
   height: 30px;
   background-color: red;
+  margin-bottom:50px;
 }
 
 #sleepinessbar{
   width: 1%;
   height: 30px;
   background-color: blue;
+  margin-bottom:50px;
 }
 /* Buttons and Bar Status END */
 
