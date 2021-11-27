@@ -20,8 +20,11 @@ let element3 = document.getElementById('sleepinessbar');
 function playerNameFunc(){
   playerName = document.getElementById("myText").value
   // alert(playerName)
-  document.getElementById("nameOutput").innerHTML = playerName
+  document.getElementById("nameOutput").innerHTML = ("Player Name: " + playerName)
   document.getElementById("myModal").style.display = "none"
+  bar();
+  timeLeft();
+  ageProgress();
 }
 
 
@@ -49,7 +52,7 @@ function bar() {
    
   }
 }
-bar();
+// bar();
 
 //main function for button usability, subtracts 2 from feed, play, light bars
 function update(param) {
@@ -84,7 +87,7 @@ function timeLeft(){
       }
   }
 }
-timeLeft();
+// timeLeft();
   
 //age
 //add a function for age bar from 1 - 100
@@ -102,7 +105,7 @@ function ageProgress() {
     }
   }
 }
-ageProgress();
+// ageProgress();
 
 function endGame(){
   alert("Game Ended")
