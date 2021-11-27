@@ -33,7 +33,7 @@ width: 80%;
     display: flex;
 }
 
-.youngdragon{
+#youngDragon{
     width: 500px;
     height: auto;
     position: fixed;
@@ -41,6 +41,15 @@ width: 80%;
     top: 0;
     /* z-index: 2; */
 } 
+#oldDragon {
+    width: 500px;
+    height: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    /* z-index: 2; */
+}
+
 
 /* Buttons and Bars Status */
 .container{

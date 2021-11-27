@@ -36,8 +36,8 @@ function bar() {
   function scene() {
     if (feedWidth >= 10 || playWidth >= 10 || lightWidth >= 10) {
       clearInterval(identity);
-      endGame();
-      console.log("end game")
+      alert("Your pet died :( ");
+      // console.log("end game")
     } else {
       feedWidth++;
       playWidth++;
@@ -98,19 +98,21 @@ function ageProgress() {
   function scene() {
     if (width >= 100) {
       clearInterval(identity);
+      document.getElementById('youngDragon').style.display='none';
+      document.getElementById('oldDragon').style.display='block';
     } else {
       width++; 
       element.style.width = width + '%';
       element.innerHTML = width * 1
+      document.getElementById('youngDragon').style.display='block';
+      document.getElementById('oldDragon').style.display='none';
     }
   }
 }
 // ageProgress();
 
 function endGame(){
-  alert("Game Ended")
+  alert("Congratulations!! You Won!!!")
 }
 
-
-    
-  
+//swapping images
