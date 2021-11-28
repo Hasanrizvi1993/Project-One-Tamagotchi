@@ -28,6 +28,9 @@ border: 1px solid #888;
 width: 80%; 
 }
 
+h1{
+    color: black;
+}
 
 .container{
     display: flex;
@@ -74,7 +77,8 @@ width: 80%;
     width: 20%;
     padding: 10px;
     text-align: center;
-    font-weight: bold
+    font-weight: bold;
+    border: 5px black solid;
 }
 
 .barClass{
@@ -86,20 +90,23 @@ width: 80%;
   height: 30px;
   background-color: green;
   margin-bottom:50px;
+  font-weight: bold;
 }
 
 #playbar{
   width: 1%;
   height: 30px;
-  background-color: red;
+  background-color: yellow;
   margin-bottom:50px;
+  font-weight: bold;
 }
 
 #sleepinessbar{
   width: 1%;
   height: 30px;
-  background-color: blue;
+  background-color: pink;
   margin-bottom:50px;
+  font-weight: bold;
 }
 /* Buttons and Bar Status END */
 
@@ -126,7 +133,7 @@ width: 80%;
 #ageProgress {
     width: 1%;
     height: 30px;
-    background-color: green;
+    background-color: lightgreen;
 }
 
 
