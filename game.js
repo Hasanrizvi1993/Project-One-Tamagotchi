@@ -4,11 +4,17 @@ let playerName = "";
 let feedWidth = 1
 let playWidth = 1
 let lightWidth = 1
+let ageWidth = 1
+let timeLeftWidth = 0
 
 //These variables grab the bar IDs for use throughout the app for rendering purposes
 let element = document.getElementById('feedbar'); 
 let element2 = document.getElementById('playbar');
 let element3 = document.getElementById('sleepinessbar');  
+
+//the control the timer bar and the time progess bar
+let timeLeft = document.getElementById("timeLeft");
+let timer = document.getElementById("timer");
 
 //welcome modal input 
 // document.getElementById("myButton").onclick = function(){
@@ -23,7 +29,7 @@ function playerNameFunc(){
   document.getElementById("nameOutput").innerHTML = ("Player Name: " + playerName)
   document.getElementById("myModal").style.display = "none"
   bar();
-  timeLeft();
+  timeLeftFunc();
   ageProgress();
 }
 
@@ -36,7 +42,8 @@ function bar() {
   function scene() {
     if (feedWidth >= 10 || playWidth >= 10 || lightWidth >= 10) {
       clearInterval(identity);
-      alert("Your pet died :( ");
+      endGameModal();
+
       // console.log("end game")
     } else {
       feedWidth++;
@@ -71,39 +78,52 @@ function update(param) {
 }
 
 // function for the game completion timer 
-//deathbar
-function timeLeft(){
-  let timeLeft = document.getElementById("timeLeft");
-  let timer = document.getElementById("timer");
-  let startTimer = setInterval(barCount, 50)
-  function barCount (){
-      if (timeLeft.clientWidth < timer.clientWidth){
-        timeLeft.style.width = timeLeft.clientWidth + 1 + "px";
-      }
-      else {
-        timeLeft.style.width = timer.clientWidth + "px";
-        clearInterval(startTimer);
-        endGame();
-      }
+
+// function timeLeftFunc(){
+  
+//   let startTimer = setInterval(barCount, 10)
+//   function barCount (){
+//       if (timeLeft.clientWidth < timer.clientWidth){
+//         timeLeft.style.width = timeLeft.clientWidth + 1 + "px";
+//       }
+//       else {
+//         timeLeft.style.width = timer.clientWidth + "px";
+//         clearInterval(startTimer);
+//         // endGameModal();
+//         // return
+//       }
+//   }
+// }
+function timeLeftFunc() {
+  let id = setInterval(scene, 60);
+  function scene() {
+    if (timeLeftWidth >= 100) {
+      clearInterval(id);
+      endGameModal();
+  }else {
+    timeLeftWidth++; 
+      timeLeft.style.width = timeLeftWidth + '%';
+      timeLeft.innerHTML = timeLeftWidth * 1
+   }
   }
 }
-// timeLeft();
+
   
 //age
 //add a function for age bar from 1 - 100
 function ageProgress() {
   let element = document.getElementById("ageProgress");   
-  let width = 1;
+  
   let identity = setInterval(scene, 60);
   function scene() {
-    if (width >= 100) {
+    if (ageWidth >= 100) {
       clearInterval(identity);
       document.getElementById('youngDragon').style.display='none';
       document.getElementById('oldDragon').style.display='block';
     } else {
-      width++; 
-      element.style.width = width + '%';
-      element.innerHTML = width * 1
+      ageWidth++; 
+      element.style.width = ageWidth + '%';
+      element.innerHTML = ageWidth * 1
       document.getElementById('youngDragon').style.display='block';
       document.getElementById('oldDragon').style.display='none';
     }
@@ -111,11 +131,49 @@ function ageProgress() {
 }
 // ageProgress();
 
-function endGame(){
-  let endGamePrompt= prompt("You Won!!! would you like to quit or play again?", "Quit/Play")
-    if (endGamePrompt === "Quit"){
-      window.close()
-    }
+// function endGame(){
+//   let endGamePrompt= prompt("You Won!!! would you like play again?", "yes/no")
+//     if (endGamePrompt === "no"){
+//       window.close()
+//     } else{
+//       console.log(endGamePrompt);
+//       // playerName = "";
+//       feedWidth = 1
+//       playWidth = 1
+//       lightWidth = 1
+//       ageWidth = 1
+//       bar();
+//       timeLeftFunc();
+//       ageProgress();
+//       // break;
+//     }
+// }
+
+function endGameModal(param){
+  document.getElementById('myEndModal').style.display = 'block';
+  document.getElementById('end-modal-content-id').style.display = 'block';
+
+  if(param === 'quit'){
+    window.close();
+  } else if(param === 'replay'){
+    document.getElementById('myEndModal').style.display = 'none';
+    document.getElementById('end-modal-content-id').style.display = 'none';
+    console.log(param)
+    feedWidth = 0
+    playWidth = 0
+    lightWidth = 0
+    ageWidth = 0
+    timeLeftWidth = 0
+    bar();
+    timeLeftFunc();
+    ageProgress();
+   
+  }
+
 }
+// endGameModal();
+
+
+
 
 //swapping images

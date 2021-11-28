@@ -7,7 +7,7 @@ body{
     margin-top: 20vw;
 } 
 
-.modal {
+.modal, .endModal {
 overflow: hidden; 
 height: 100%; 
 z-index: 1; 
@@ -20,13 +20,18 @@ background-color: rgba(0, 0, 0, 0.769);
 }
 
 
-.modal-content {
+.modal-content, .end-modal-content {
 background-color: #fefefe;
 margin: 15% auto; 
 padding: 20px;
 border: 1px solid #888;
 width: 80%; 
 }
+
+.endModal, .end-modal-content{
+    display: none;
+}
+
 
 h1{
     color: black;
