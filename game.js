@@ -1,4 +1,6 @@
 let playerName = "";
+let gameWon = false;
+console.log(gameWon)
 
 //These variables independently control the width of each bar
 let feedWidth = 1
@@ -35,28 +37,32 @@ function playerNameFunc(){
 
 
 // main function controlling feed, play, light status bar 
-function bar() {
+if(gameWon === false){
 
-  let identity = setInterval(scene, 800);
+  function bar() {
 
-  function scene() {
-    if (feedWidth >= 10 || playWidth >= 10 || lightWidth >= 10) {
-      clearInterval(identity);
-      endGameModal();
+    let identity = setInterval(scene, 800);
 
-      // console.log("end game")
-    } else {
-      feedWidth++;
-      playWidth++;
-      lightWidth++ 
-      element.style.width = feedWidth + '%';
-      element.innerHTML = feedWidth * 1
-      element2.style.width = playWidth + '%';
-      element2.innerHTML = playWidth * 1
-      element3.style.width = lightWidth + '%';
-      element3.innerHTML = lightWidth * 1
+    function scene() {
+      if (feedWidth >= 10 || playWidth >= 10 || lightWidth >= 10) {
+        clearInterval(identity);
+        // endGameModal();
+        lostOrWin('lost');
+
+        // console.log("end game")
+      } else {
+        feedWidth++;
+        playWidth++;
+        lightWidth++ 
+        element.style.width = feedWidth + '%';
+        element.innerHTML = feedWidth * 1
+        element2.style.width = playWidth + '%';
+        element2.innerHTML = playWidth * 1
+        element3.style.width = lightWidth + '%';
+        element3.innerHTML = lightWidth * 1
+      }
+    
     }
-   
   }
 }
 // bar();
@@ -99,7 +105,9 @@ function timeLeftFunc() {
   function scene() {
     if (timeLeftWidth >= 100) {
       clearInterval(id);
-      endGameModal();
+      // endGameModal();
+      gameWon = true;
+      lostOrWin('win');
   }else {
     timeLeftWidth++; 
       timeLeft.style.width = timeLeftWidth + '%';
@@ -152,6 +160,11 @@ function ageProgress() {
 function endGameModal(param){
   document.getElementById('myEndModal').style.display = 'block';
   document.getElementById('end-modal-content-id').style.display = 'block';
+  feedWidth = 0
+  playWidth = 0
+  lightWidth = 0
+  ageWidth = 0
+  timeLeftWidth = 0
 
   if(param === 'quit'){
     window.close();
@@ -159,11 +172,7 @@ function endGameModal(param){
     document.getElementById('myEndModal').style.display = 'none';
     document.getElementById('end-modal-content-id').style.display = 'none';
     console.log(param)
-    feedWidth = 0
-    playWidth = 0
-    lightWidth = 0
-    ageWidth = 0
-    timeLeftWidth = 0
+
     bar();
     timeLeftFunc();
     ageProgress();
@@ -173,7 +182,15 @@ function endGameModal(param){
 }
 // endGameModal();
 
-
+function lostOrWin(param){
+  if(param === 'win'){
+    document.getElementById('endGameModalLabel').innerHTML = "You Won!"
+    endGameModal()
+  } else{
+    document.getElementById('endGameModalLabel').innerHTML = "You lost!"
+    endGameModal()
+  }
+}
 
 
 //swapping images
