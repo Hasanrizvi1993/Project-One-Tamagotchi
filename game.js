@@ -112,7 +112,10 @@ function ageProgress() {
 // ageProgress();
 
 function endGame(){
-  alert("Congratulations!! You Won!!!")
+  let endGamePrompt= prompt("You Won!!! would you like to quit or play again?", "Quit/Play")
+    if (endGamePrompt === "Quit"){
+      window.close()
+    }
 }
 
 //swapping images
