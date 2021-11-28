@@ -94,7 +94,7 @@ function timeLeft(){
 function ageProgress() {
   let element = document.getElementById("ageProgress");   
   let width = 1;
-  let identity = setInterval(scene, 80);
+  let identity = setInterval(scene, 60);
   function scene() {
     if (width >= 100) {
       clearInterval(identity);
