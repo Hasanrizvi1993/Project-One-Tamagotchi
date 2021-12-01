@@ -1,12 +1,12 @@
 let playerName = "";
-let gameWon = false;
-console.log(gameWon)
+// let gameWon = false;
+// console.log(gameWon)
 
 //These variables independently control the width of each bar
-let feedWidth = 1
-let playWidth = 1
-let lightWidth = 1
-let ageWidth = 1
+let feedWidth = 0
+let playWidth = 0
+let lightWidth = 0
+let ageWidth = 0
 let timeLeftWidth = 0
 
 //These variables grab the bar IDs for use throughout the app for rendering purposes
@@ -18,13 +18,21 @@ let element3 = document.getElementById('sleepinessbar');
 let timeLeft = document.getElementById("timeLeft");
 let timer = document.getElementById("timer");
 
-//welcome modal input 
-// document.getElementById("myButton").onclick = function(){
-//   console.log('pressing')
-//   let name = document.getElementById("myText").value
-//   alert(name)
-// }
 
+// start timer function
+// function startGameInterval
+
+
+
+
+
+
+
+
+
+
+
+// start game modal -- input to enter player name and pressing play to begin
 function playerNameFunc(){
   playerName = document.getElementById("myText").value
   // alert(playerName)
@@ -37,18 +45,19 @@ function playerNameFunc(){
 
 
 // main function controlling feed, play, light status bar 
-if(gameWon === false){
-
+// this control the bar going to
+let identity;
   function bar() {
 
-    let identity = setInterval(scene, 800);
+    identity = setInterval(scene, 800);
 
     function scene() {
       if (feedWidth >= 10 || playWidth >= 10 || lightWidth >= 10) {
         clearInterval(identity);
+        clearInterval(id);
         // endGameModal();
         lostOrWin('lost');
-
+        // gameResult('lost');
         // console.log("end game")
       } else {
         feedWidth++;
@@ -64,8 +73,7 @@ if(gameWon === false){
     
     }
   }
-}
-// bar();
+
 
 //main function for button usability, subtracts 2 from feed, play, light bars
 function update(param) {
@@ -84,30 +92,17 @@ function update(param) {
 }
 
 // function for the game completion timer 
-
-// function timeLeftFunc(){
-  
-//   let startTimer = setInterval(barCount, 10)
-//   function barCount (){
-//       if (timeLeft.clientWidth < timer.clientWidth){
-//         timeLeft.style.width = timeLeft.clientWidth + 1 + "px";
-//       }
-//       else {
-//         timeLeft.style.width = timer.clientWidth + "px";
-//         clearInterval(startTimer);
-//         // endGameModal();
-//         // return
-//       }
-//   }
-// }
+let id;
 function timeLeftFunc() {
-  let id = setInterval(scene, 60);
+   id = setInterval(scene, 200);
   function scene() {
     if (timeLeftWidth >= 100) {
       clearInterval(id);
+      clearInterval(identity);
       // endGameModal();
-      gameWon = true;
+      // gameWon = true;
       lostOrWin('win');
+      // gameResult('win');
   }else {
     timeLeftWidth++; 
       timeLeft.style.width = timeLeftWidth + '%';
@@ -137,26 +132,8 @@ function ageProgress() {
     }
   }
 }
-// ageProgress();
 
-// function endGame(){
-//   let endGamePrompt= prompt("You Won!!! would you like play again?", "yes/no")
-//     if (endGamePrompt === "no"){
-//       window.close()
-//     } else{
-//       console.log(endGamePrompt);
-//       // playerName = "";
-//       feedWidth = 1
-//       playWidth = 1
-//       lightWidth = 1
-//       ageWidth = 1
-//       bar();
-//       timeLeftFunc();
-//       ageProgress();
-//       // break;
-//     }
-// }
-
+// end game modal for both lose and win condition
 function endGameModal(param){
   document.getElementById('myEndModal').style.display = 'block';
   document.getElementById('end-modal-content-id').style.display = 'block';
@@ -181,16 +158,34 @@ function endGameModal(param){
 
 }
 // endGameModal();
-
+// win or lose function inserting html into modal in each case (win or lose)
 function lostOrWin(param){
   if(param === 'win'){
     document.getElementById('endGameModalLabel').innerHTML = "You Won!"
     endGameModal()
-  } else{
+  } else if (param === 'lost'){
     document.getElementById('endGameModalLabel').innerHTML = "You lost!"
     endGameModal()
   }
 }
 
 
+
 //swapping images
+// write a function that returns value is a boolean. Need to add if user wins, return (true), 
+// function gameResult(param) {
+//   if(param === "win"){
+//     bar();
+//     timeLeftFunc();
+//     ageProgress();
+//   } else if (param === 'lose'){
+//     bar();
+//     timeLeftFunc();
+//     ageProgress();
+// }
+// }
+
+
+//if lose return (false)
+// need to create const endGame = to this function (boolean)
+//if endgame {
