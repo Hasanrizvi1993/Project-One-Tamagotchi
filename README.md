@@ -1,7 +1,8 @@
-[Tamagotchi-project 1-GA(2).pdf](https://github.com/Hasanrizvi1993/Project-One-Tamagotchi/files/7574120/Tamagotchi-project.1-GA.2.pdf)
-[Tamagotchi-project 1-GA(3).pdf](https://github.com/Hasanrizvi1993/Project-One-Tamagotchi/files/7574121/Tamagotchi-project.1-GA.3.pdf)
-[Tamagotchi-project 1-GA(4).pdf](https://github.com/Hasanrizvi1993/Project-One-Tamagotchi/files/7574122/Tamagotchi-project.1-GA.4.pdf)
-[Tamagotchi-project 1-GA.pdf](https://github.com/Hasanrizvi1993/Project-One-Tamagotchi/files/7574118/Tamagotchi-project.1-GA.pdf)
+![Screen Shot 2021-11-30 at 10 13 25 PM](https://user-images.githubusercontent.com/88109038/144182026-42a71834-1312-4e3e-8450-848b7b4f6ac3.png)
+![Screen Shot 2021-11-30 at 10 13 32 PM](https://user-images.githubusercontent.com/88109038/144182043-6c0d326f-dafd-4b99-b56c-f4976e5de404.png)
+![Screen Shot 2021-11-30 at 10 14 20 PM](https://user-images.githubusercontent.com/88109038/144182067-ffd0fae1-ddf5-4894-a4f6-f56dbc0efe0a.png)
+![Screen Shot 2021-11-30 at 10 13 51 PM](https://user-images.githubusercontent.com/88109038/144182056-e3e5bfdb-4630-4a4b-8c85-10b1f7e16c6b.png)
+
 # Project-One-Tamagotchi
 Tamagotchi game
 
@@ -31,6 +32,9 @@ Tamagotchi game
 12. if the "try again button is clicked, the game will restart
 13. if the "quit game" button is clicked, the game will end
 14. if time permits, I might add additonal features to it
+
+
+
 
 
 <!-- sudo code
