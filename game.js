@@ -1,6 +1,5 @@
 let playerName = "";
-// let gameWon = false;
-// console.log(gameWon)
+
 
 //These variables independently control the width of each bar
 let feedWidth = 0
@@ -17,19 +16,6 @@ let element3 = document.getElementById('sleepinessbar');
 //the control the timer bar and the time progess bar
 let timeLeft = document.getElementById("timeLeft");
 let timer = document.getElementById("timer");
-
-
-// start timer function
-// function startGameInterval
-
-
-
-
-
-
-
-
-
 
 
 // start game modal -- input to enter player name and pressing play to begin
@@ -55,10 +41,9 @@ let identity;
       if (feedWidth >= 10 || playWidth >= 10 || lightWidth >= 10) {
         clearInterval(identity);
         clearInterval(id);
-        // endGameModal();
+       
         lostOrWin('lost');
-        // gameResult('lost');
-        // console.log("end game")
+        
       } else {
         feedWidth++;
         playWidth++;
@@ -99,10 +84,9 @@ function timeLeftFunc() {
     if (timeLeftWidth >= 100) {
       clearInterval(id);
       clearInterval(identity);
-      // endGameModal();
-      // gameWon = true;
+      
       lostOrWin('win');
-      // gameResult('win');
+     
   }else {
     timeLeftWidth++; 
       timeLeft.style.width = timeLeftWidth + '%';
@@ -170,22 +154,43 @@ function lostOrWin(param){
 }
 
 
+//that's all folks
 
-//swapping images
-// write a function that returns value is a boolean. Need to add if user wins, return (true), 
-// function gameResult(param) {
-//   if(param === "win"){
+
+// One Triumph (I was able use modals and able to figure out how to change the physical
+// apperance of the pet at age 100)
+
+//One Thing that was difficult (Be specific! Was it the dom manipulation? css animations? )
+// one thing that was difficult (how to clear both intervals when the game is won or lost) also 
+//need to get better at CSS because I found it to be a bit more difficult
+
+//If you could redo the project what would you do differently?
+// if I could redo the project, I would use bootstrap and Jquery (just seems time saving IMO)
+
+//What is one thing you will take with you to the next project?
+// a better understanding of writing functions
+
+//3. Share one code snippet you are proud of.
+// function endGameModal(param){
+//   document.getElementById('myEndModal').style.display = 'block';
+//   document.getElementById('end-modal-content-id').style.display = 'block';
+//   feedWidth = 0
+//   playWidth = 0
+//   lightWidth = 0
+//   ageWidth = 0
+//   timeLeftWidth = 0
+
+//   if(param === 'quit'){
+//     window.close();
+//   } else if(param === 'replay'){
+//     document.getElementById('myEndModal').style.display = 'none';
+//     document.getElementById('end-modal-content-id').style.display = 'none';
+//     console.log(param)
+
 //     bar();
 //     timeLeftFunc();
 //     ageProgress();
-//   } else if (param === 'lose'){
-//     bar();
-//     timeLeftFunc();
-//     ageProgress();
-// }
-// }
+   
+//   }
 
-
-//if lose return (false)
-// need to create const endGame = to this function (boolean)
-//if endgame {
+// }
